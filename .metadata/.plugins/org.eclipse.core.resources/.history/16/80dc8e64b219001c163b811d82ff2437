@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.first.board">
+	<!-- <select id="viewAll" resultType="com.first.board.BoardVO">
+		SELECT*FROM board ORDER BY SEQ DESC
+	</select> -->
+	
+	<update id="update" parameterType="com.first.board.BoardVO">
+	UPDATE BOARD SET TITLE=#{title}, 
+	</update>
+</mapper>

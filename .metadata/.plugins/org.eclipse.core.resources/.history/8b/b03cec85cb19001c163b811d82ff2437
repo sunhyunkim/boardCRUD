@@ -1,0 +1,77 @@
+package com.first.board;
+
+import java.util.ArrayList;
+import java.util.List;
+import com.first.board.BoardVO;
+
+import org.apache.ibatis.annotations.Mapper;
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class BoardMapperImpl implements BoardMapper {
+
+	@Autowired
+	private SqlSessionTemplate sqlSessionTemplate;
+
+	@Autowired
+	public void setSqlSessionTemplate(SqlSessionTemplate sqlSession) {
+		this.sqlSessionTemplate = sqlSession;
+	}
+
+	/*
+	 * @Override public int update(BoardVO seq) { int res = 0; try { return
+	 * sqlSessionTemplate.update(NAMESPACE + "update", seq); } catch (Exception e) {
+	 * e.printStackTrace(); } return res; }
+	 */
+
+	@Override
+	public List<BoardVO> selectList() {
+		List<BoardVO> list = new ArrayList<BoardVO>();
+
+		try {
+			list = sqlSessionTemplate.selectList(NAMESPACE + "selectList");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return list;
+	}
+
+	@Override
+	public BoardVO selectOne(int seq) {
+		BoardVO dto = null;
+		try {
+			dto = sqlSessionTemplate.selectOne(NAMESPACE + "selectOne", seq);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return dto;
+	}
+
+	@Override
+	public int update(BoardVO dto) {
+		int res = 0;
+		try {
+			res = sqlSessionTemplate.update(NAMESPACE + "update", dto);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return res;
+	}
+
+	@Override
+	public int insert(BoardVO dto) { 
+		int res=0;
+		
+		try {
+			res=sqlSessionTemplate.insert(NAMESPACE+"insert", dto);
+		}
+		return 0;
+	}
+
+	/*
+	 * @Override public int delete(int seq) { // TODO Auto-generated method stub
+	 * return 0; }
+	 */
+}

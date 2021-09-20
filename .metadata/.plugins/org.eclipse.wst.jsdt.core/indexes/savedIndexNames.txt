@@ -1,0 +1,11 @@
+INDEX VERSION 1.4+C:\Users\rlatj\Downloads\Spring\sts-bundle\sts-3.9.11.RELEASE\workspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3311308419.index
+957956626.index
+4288858630.index
+805836054.index
+3410274543.index
+3163065701.index
+3475454093.index
+2991573031.index
+802216112.index
+1425716597.index

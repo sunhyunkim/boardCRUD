@@ -1,0 +1,9 @@
+package com.first.board;
+
+public class BoardVO {
+
+	int seq,cnt;
+	String title, writer, content;
+	Date regdate;
+	
+}

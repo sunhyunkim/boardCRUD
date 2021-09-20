@@ -1,0 +1,7 @@
+package com.first.board;
+
+public class BoardMapper {
+
+	public List<BoardVO> viewAll();
+	
+}

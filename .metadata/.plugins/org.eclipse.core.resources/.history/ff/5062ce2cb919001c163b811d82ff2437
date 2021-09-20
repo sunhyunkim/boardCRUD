@@ -1,0 +1,13 @@
+package com.first.board;
+
+import java.util.List;
+import com.first.board.BoardVO;
+
+public interface BoardMapper {
+
+	String NAMESPACE="com.first.board";
+	
+
+	public int update(BoardVO seq);
+	
+}

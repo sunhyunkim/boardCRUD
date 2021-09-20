@@ -1,0 +1,20 @@
+package com.first.board;
+
+import java.util.List;
+import com.first.board.BoardVO;
+
+public interface BoardMapper {
+
+	String NAMESPACE = "com.first.board.";
+
+	public List<BoardVO> selectList();
+
+	public BoardVO selectOne(int seq);
+
+	/* public int insert(BoardVO dto); */
+
+	public int update(BoardVO dto);
+
+	/* public int delete(int seq); */
+
+}

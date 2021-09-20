@@ -1,0 +1,11 @@
+package com.first.board;
+
+import java.util.List;
+import com.first.board.BoardVO;
+import com.first.board.BoardService;
+import com.first.board.BoardMapper;
+
+public class BoardServiceImpl implements BoardService{
+	
+
+}

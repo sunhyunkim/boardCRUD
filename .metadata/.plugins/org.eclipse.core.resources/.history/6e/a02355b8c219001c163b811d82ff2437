@@ -1,0 +1,43 @@
+package com.first.board;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.first.board.BoardVO;
+
+@Service
+public class BoardServiceImpl implements BoardService{
+
+	@Autowired
+	public BoardMapper mapper;
+	
+	/*
+	 * @Override public List<BoardVO> selectBoardAll() {
+	 * 
+	 * return mapper.viewAll(); }
+	 */
+
+	/*
+	 * @Override public int update(BoardVO dto) { return mapper.update(dto); }
+	 */
+
+	@Override
+	public List<BoardVO> selectList() {
+		
+		return mapper.selectList();
+	}
+
+	/*
+	 * @Override public BoardVO selectOne(int seq) { // TODO Auto-generated method
+	 * stub return null; }
+	 * 
+	 * @Override public int insert(BoardVO dto) { // TODO Auto-generated method stub
+	 * return 0; }
+	 * 
+	 * @Override public int delete(int seq) { // TODO Auto-generated method stub
+	 * return 0; }
+	 * 
+	 */
+}

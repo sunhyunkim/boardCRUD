@@ -1,0 +1,18 @@
+package com.first.board;
+
+import java.util.List;
+import com.first.board.BoardVO;
+import com.first.board.BoardService;
+import com.first.board.BoardMapper;
+
+@Service
+public class BoardServiceImpl implements BoardService{
+
+	@Override
+	public List<BoardVO> selectBoardAll() {
+		\
+		return null;
+	}
+	
+
+}

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<select id="viewAll" resultType="com.first.board.BoardVO">
+SELECT*FROM board ORDER BY SEQ DESC
+</select>

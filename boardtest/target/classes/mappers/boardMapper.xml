@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="com.board.boardtest.boardMapper">
+ 
+
+    <select id="getBoardList" parameterType="com.board.boardtest.form.BoardForm" resultType="com.board.boardtest.dto.BoardDto">
+    
+        SELECT TB_IDX 
+             , TB_TITLE 
+             , TB_CONTENTS 
+             , TB_CONTENT_CNT 
+             , TB_DEL_GB 
+             , TB_WRITE_DTM 
+             , TB_WRITE_ID 
+        FROM TB_BOARD
+    
+    </select>
+    
+</mapper>

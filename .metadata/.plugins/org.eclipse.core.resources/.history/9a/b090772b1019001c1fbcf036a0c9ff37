@@ -1,0 +1,11 @@
+package com.first.board;
+
+import java.util.List;
+import com.first.board.BoardVO;
+import com.first.board.BoardVO;
+public interface BoardMapper {
+
+	public BoardMapper mapper;
+	public List<BoardVO> viewAll(int seq);
+	
+}

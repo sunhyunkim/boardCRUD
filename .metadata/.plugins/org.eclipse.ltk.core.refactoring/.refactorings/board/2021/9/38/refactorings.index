@@ -1,0 +1,4 @@
+1631876085303	Move 'root-context.xml' to 'appServlet'
+1631877394164	Move 'root-context.xml' to 'WEB-INF'
+1631877982053	Move 'root-context.xml' to 'spring'
+1631946525504	Move 'BoardMapper.xml' to 'resources'

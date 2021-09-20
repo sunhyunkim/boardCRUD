@@ -1,0 +1,19 @@
+package com.first.board;
+
+import java.util.List;
+import com.first.board.BoardVO;
+
+public interface BoardService {
+	/*
+	 * public List<BoardVO> selectBoardAll(); public List<BoardVO> selectList();
+	 * public BoardVO selectOne(int cnt); public int insert(BoardVO seq);
+	 */
+	
+	public List<BoardVO> selectList();
+	public BoardVO selectOne(int seq);
+	public int insert(BoardVO dto);
+	public int update(BoardVO dto);
+	public int delete(int seq);
+	/* public int delete(int cnt); */
+	
+}

@@ -1,0 +1,7 @@
+package com.first.board;
+
+public interface BoardService {
+	
+	public List<BoardVO> selectBoardAll();
+
+}

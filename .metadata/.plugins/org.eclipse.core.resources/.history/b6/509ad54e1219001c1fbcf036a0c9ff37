@@ -1,0 +1,29 @@
+package com.first.board;
+
+import java.util.List;
+import com.first.board.BoardVO;
+
+import org.apache.ibatis.annotations.Mapper;
+import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class BoardMapperImpl implements BoardMapper{
+
+	@Autowired
+	private SqlSessionTemplate sqlSessionTemplate;
+	
+	
+	public void setSqlSessionTemplate(SqlSessionTemplate sqlSession) {
+		this.sqlSessionTemplate=sqlSession;
+	}
+	
+	@Override
+	public List<BoardVO> viewAll() {
+		
+		return sqlSessionTemplate.selectOne("viewAll");
+				
+	}
+
+}

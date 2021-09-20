@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="dearWedding"/>
+<aop-project name="boardtest"/>
+<aop-project name="0417_springMVCBoard_mybatis"/>
+<aop-project name="board"/>
+</aop-reference-model>

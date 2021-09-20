@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.first.board">
+	<!-- <select id="viewAll" resultType="com.first.board.BoardVO">
+		SELECT*FROM board ORDER BY SEQ DESC
+	</select> -->
+	<resultMap type="com.first.board.BoardVO" id="boardMap">
+	<result property="seq" column="SEQ"/>
+	<result property="writer" column="WRITER"/>
+	<result property="title" column="TITLE"/>
+	<result property="content" column="CONTENT"/>
+	<result property="regdate" column="REGDATE"/>
+	</resultMap>
+	
+	<select id="selectList" resultMap="boardMap">
+	SELECT SEQ, WRITER, TITLE, CONTENT, REGDATE FROM BOARD
+	</select>
+	
+	<select id="selectOne" resultType="com.first.board.BoardVO" parameterType="int">
+	SELECT SEQ, WRITER, TITLE, CONTENT, REGDATE FROM BOARD WHERE SEQ=#{seq}
+	</select>
+	
+	<update id="update" parameterType="com.first.board.BoardVO">
+	UPDATE BOARD SET TITLE=#{title}, CONTENT=#{content} WHERE SEQ=#{seq}
+	</update>
+	
+	<insert id="insert" parameterType="com.first.board.BoardVO">
+	INSERT INTO BOARD (WRITER, TITLE, CONTENT, REGDATE) VALUES (#{writer}, #{title}, #{content}, REGDATE)
+	</insert>
+</mapper>

@@ -1,0 +1,23 @@
+package com.first.board;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.first.board.BoardVO;
+
+@Service
+public class BoardServiceImpl implements BoardService{
+
+	@Autowired
+	public BoardMapper mapper;
+	
+	@Override
+	public BoardVO selectBoardAll(int seq) {
+		
+		return mapper.viewAll(seq);
+	}
+	
+
+}

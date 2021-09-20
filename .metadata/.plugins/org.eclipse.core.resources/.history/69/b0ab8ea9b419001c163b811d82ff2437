@@ -1,0 +1,19 @@
+package com.first.board;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class main {
+public static void main(String[] args) {
+	
+/*	ApplicationContext context = new ClassPathXmlApplicationContext("root-context.xml");
+
+	 
+    // 클래스타입으로 받을 수 있다.
+    boardItems nameContainer = context.getBean("name",boardItems.class);
+    
+    System.out.println(nameContainer);
+    
+}*/
+}
+}

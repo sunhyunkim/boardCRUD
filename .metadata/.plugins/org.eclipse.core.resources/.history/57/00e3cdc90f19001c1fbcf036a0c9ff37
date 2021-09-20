@@ -1,0 +1,21 @@
+package com.first.board;
+
+import java.util.List;
+import com.first.board.BoardVO;
+import org.mybatis.spring.SqlSessionTemplate;
+
+public class BoardMapperImpl implements BoardMapper{
+
+	private SqlSessionTemplate sqlSessionTemplate;
+	
+	public void setSqlSessionTemplate(SqlSessionTemplate sqlSession) {
+		this.sqlSessionTemplate=sqlSession;
+	}
+	
+	@Override
+	public List<BoardVO> viewAll(int seq) {
+		
+		return selectOne("viewAll", seq);
+	}
+
+}
